@@ -1,0 +1,23 @@
+
+{
+  "name": "detection-meetings",
+  "version": "1.0.0",
+  "description": "Sistema de detecção de encontros entre pessoas monitoradas utilizando coordenadas geográficas e registros temporais.",
+  "main": "src/process-dataset.js",
+  "scripts": {
+    "process": "node src/process-dataset.js",
+    "test:unit": "node tests/parser.test.js && node tests/grouping.test.js && node tests/distance.test.js && node tests/detector.test.js && node tests/exporter.test.js",
+    "test:validation": "node tests/validate-output.js",
+    "test:official": "node tests/compare-output.js 1 && node tests/compare-output.js 2",
+    "test:performance": "node tests/benchmark.js",
+    "test": "npm run test:unit && npm run test:official && npm run test:validation"
+},
+  "keywords": [
+    "nodejs",
+    "geolocation",
+    "haversine",
+    "streaming",
+    "encounter-detection"
+  ],
+  "type": "commonjs"
+}
