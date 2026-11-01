@@ -120,15 +120,19 @@ No external runtime dependencies are required.
 - Node.js
 - npm
 - Git
+- Git LFS
 
 ### Installation
 
 Clone the repository:
 
 ```bash
+git lfs install
 git clone <repository-url>
 cd detection-meetings
 ```
+
+Datasets 6 and 7 are stored with Git LFS because they exceed GitHub's regular file size limit. Git LFS downloads them during clone.
 
 No additional package installation is necessary because the project uses Node.js built-in modules.
 
